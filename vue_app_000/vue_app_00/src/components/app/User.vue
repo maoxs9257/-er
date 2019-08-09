@@ -3,14 +3,16 @@
         <div class="header_top">
             <div class="msage_1"><img src="../../assets/msage.png" alt=""></div>
             <div class="login_user">
+                <div class="header">
                 <span>
                     <img src="../../assets/user_p.png" alt="">
                 </span>
-                <span>立即登录</span>
+                <span @click="dl_user">立即登录</span>
                 <span>
                     <img src="../../assets/jifen.png" alt="">
                     <span>签到领积分</span>
                 </span>
+                </div>
                 <div class="vip_user">
                     <span>绿卡</span>
                     <span>花0.25/天，预计省806元/年</span>
@@ -96,7 +98,14 @@
 </template>
 <script>
 export default {
-    
+    data(){
+        return{}
+    },
+    methods:{
+        dl_user(){
+            this.$router.push("/Login");
+        }
+    }
 }
 </script>
 <style scoped>
@@ -111,7 +120,7 @@ export default {
     }
     .header_top{
         width:100%;
-        height:170px;
+        height:180px;
         background:#3fc260;
         border-bottom-right-radius: 10%;
         border-bottom-left-radius: 10%;
@@ -121,7 +130,15 @@ export default {
         text-align: right;
         padding:13px;
     }
-    .login_user>span:first-child{
+    .header{
+        width:94%;
+        margin:0 auto;
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    .header>span:first-child{
         display:inline-block;
         width:45px;
         height:45px;
@@ -129,25 +146,21 @@ export default {
         text-align: center;
         border-radius:50%;
         background:#ddd;
-        margin:5px 10px;
+        margin:5px 1px;
     }
-    .login_user>span:first-child>img{
+    .header>span:first-child>img{
         display:inline-block;
         margin-top: 7px;
     }
-    .login_user>span:nth-child(2){
+    .header>span:nth-child(2){
         font-family:"宋体";
         color:#fff;
         font-weight:700;
-        position: relative;
-        top:-8px;
     }
-    .login_user>span:nth-child(3){
+    .header>span:nth-child(3){
         display: inline-block;
         text-align: center;
         margin-left: 120px;
-        position: relative;
-        top:-8px;
         width:115px;
         height:45px;
         background:rgba(90, 89, 89, 0.5);
@@ -156,7 +169,7 @@ export default {
         border-bottom-left-radius: 25px;
         border-bottom-right-radius: 25px;
     }
-    .login_user>span:nth-child(3)>img,.login_user>span:nth-child(3)>span{
+    .header>span:nth-child(3)>img,.login_user>span:nth-child(3)>span{
         display: inline-block;
         margin-top: 12px;
     }
