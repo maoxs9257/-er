@@ -96,8 +96,17 @@ server.get("/reg",(req,res)=>{
       res.send({code:-2,msg:"用户名已存在"});
     }
   })
-
 })
+
+// server.get("/product_n",(req,res)=>{
+//   var pid=req.query.pid;
+//   var sql="SELECT img_url,p_product FROM dd_product WHERE pid=?";
+//   pool.query(sql,[pid],(err,result)=>{
+//     if(err)throw err;
+//     res.send({code:1,msg:"查询成功",data:result});
+//     console.log(result);
+//   })
+// });
 
 //功能二:分页查询商品列表80-105
 //1:接收请求方式 GET 请求地址 /product

@@ -94,6 +94,32 @@
         </div>
         <hr>
         <span class="c_like">· 猜你喜欢 ·</span>
+        <div class="shopping">
+            <div class="shopping_product">
+                <div>
+                    <img src="../../assets/gancuim.png" alt="">
+                </div>
+                <div>
+                    <span>派力特 休闲零食 掌心干脆面</span>
+                </div>
+                <div>
+                    <span>￥11.90</span>
+                    <img src="../../assets/cart.png" alt="">
+                </div>
+            </div>
+            <div class="shopping_product">
+                <div>
+                    <img src="../../assets/gancuim.png" alt="">
+                </div>
+                <div>
+                    <span>派力特 休闲零食 掌心干脆面</span>
+                </div>
+                <div>
+                    <span>￥11.90</span>
+                    <img src="../../assets/cart.png" alt="">
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 <script>
@@ -297,6 +323,10 @@ export default {
         font-size: 14px;
         font-family:"宋体";
     }
+    hr{
+        width: 94%;
+        margin: 0 auto;
+    }
     .c_like{
         display:inline-block;
         position: relative;
@@ -306,5 +336,39 @@ export default {
         font-size: 14px;
         font-family: "宋体";
         background:#ece6e6;
+    }
+    .shopping{
+        margin-top: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap:wrap;
+        width:94%;
+        margin: 0 auto;
+    }
+    .shopping_product{
+        width:45%;
+        border-radius:10px;
+        background: #fff;
+        text-align: center;
+        padding: 5px;
+
+    }
+    .shopping_product>div:first-child img{
+        width:100%;
+    }
+    .shopping_product>div:nth-child(2) span{
+        display: inline-block;
+        padding: 5px;
+        font-size: 13px;
+        font-weight: 700;
+        text-align: left;
+    }
+    .shopping_product>div:nth-child(3){
+        display: flex;
+        justify-content:space-around;
+        height:35px;
+        line-height: 35px;
+        padding: 5px;
     }
 </style>
