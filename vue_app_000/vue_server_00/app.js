@@ -123,15 +123,14 @@ server.get("/product",(req,res)=>{
 //5:对pageSize转换整型? nodejs 报错
  ps = parseInt(ps);
 //6:创建sql语句
- var sql = "SELECT lid,price,lname";
- sql +=" ,img_url FROM xz_laptop";
- sql +=" LIMIT ?,?";
+ var sql = "SELECT pid,title,p_title,price,img_url,p_product FROM dd_product LIMIT ?,?";
 //7:通过连接池发送sql语句
  pool.query(sql,[offset,ps],(err,result)=>{
   if(err)throw err;
   //8:获取数据库返回的查询结果
   //9:将查询结果发送客户端
   res.send({code:1,msg:"查询成功",data:result});
+  // console.log(result);
  });
 })
 

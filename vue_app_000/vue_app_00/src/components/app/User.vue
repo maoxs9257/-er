@@ -95,42 +95,50 @@
         <hr>
         <span class="c_like">· 猜你喜欢 ·</span>
         <div class="shopping">
-            <div class="shopping_product">
+            <div class="shopping_product" v-for="(item,i) of list" :key="i">
                 <div>
-                    <img src="../../assets/gancuim.png" alt="">
+                    <img :src="`http://127.0.0.1:3001/`+item.img_url"/>
                 </div>
                 <div>
-                    <span>派力特 休闲零食 掌心干脆面</span>
+                    <span>{{item.title}}</span>
                 </div>
                 <div>
-                    <span>￥11.90</span>
-                    <img src="../../assets/cart.png" alt="">
-                </div>
-            </div>
-            <div class="shopping_product">
-                <div>
-                    <img src="../../assets/gancuim.png" alt="">
-                </div>
-                <div>
-                    <span>派力特 休闲零食 掌心干脆面</span>
-                </div>
-                <div>
-                    <span>￥11.90</span>
+                    <span>￥{{item.price}}</span>
                     <img src="../../assets/cart.png" alt="">
                 </div>
             </div>
         </div>
+        <mt-button class="btn-more" @click="more_p">加载更多...</mt-button>
     </div>
 </template>
 <script>
 export default {
     data(){
-        return{}
+        return{
+            list:[],//商品列表数组
+            pno:0
+        }
+    },
+    created(){
+        this.loadMore();
     },
     methods:{
         dl_user(){
             this.$router.push("/Login");
+        },
+        loadMore(){
+            var url="product";
+            this.pno++;
+            var obj={pno:this.pno};
+            this.axios.get(url,{params:obj}).then(res=>{
+                var rows=this.list.concat(res.data.data);
+                this.list=rows;
+            })
+        },
+        more_p(){
+            this.loadMore();
         }
+
     }
 }
 </script>
@@ -179,12 +187,15 @@ export default {
         margin-top: 7px;
     }
     .header>span:nth-child(2){
-        font-family:"宋体";
+        font-family:"楷体";
+        font-size: 16px;
         color:#fff;
         font-weight:700;
     }
     .header>span:nth-child(3){
         display: inline-block;
+        font-family:"楷体";
+        font-size: 16px;
         text-align: center;
         margin-left: 120px;
         width:115px;
@@ -210,7 +221,7 @@ export default {
         border-top-left-radius: 15px;
         color:#fff;
         font-size: 13px;
-        font-family: "宋体";
+        font-family: "楷体";
     }
     .vip_user>span:first-child{
         font-size: 16px;
@@ -246,6 +257,9 @@ export default {
         line-height: 35px;
         text-align: center;
         margin:10px 0;
+        font-family:"楷体";
+        font-size: 19px;
+        font-weight: 700;
     }
     .youhui>span:first-child{
         border-right: 1px solid #ddd;
@@ -264,7 +278,7 @@ export default {
     }
     .all_dd>span:first-child{
         font-size: 20px;
-        font-family:"宋体";
+        font-family:"楷体";
         font-weight: 700;
         padding:20px;
     }
@@ -272,6 +286,7 @@ export default {
         font-size: 15px;
         padding:20px;
         color:#aaa;
+        font-family:"楷体";
     }
     .te_img{
         display: flex;
@@ -281,7 +296,7 @@ export default {
     }
     .te_img>div>p{
         margin-top: 10px;
-        font-family: "宋体";
+        font-family: "楷体";
         font-size: 14px;
         color:#aaa;
     }
@@ -298,7 +313,7 @@ export default {
     }
     .use_cy{
         width:94%;
-        margin:20px auto;
+        margin:30px auto;
         background:#fff;
         border-radius: 8px;
         text-align: center;
@@ -309,7 +324,7 @@ export default {
         margin-left: 20px;
         font-size: 20px;
         font-weight: 700;
-        font-family: "宋体"
+        font-family: "楷体"
     }
     .cy_gn{
         display: flex;
@@ -321,7 +336,7 @@ export default {
         margin:20px 12px;
         color:#aaa;
         font-size: 14px;
-        font-family:"宋体";
+        font-family:"楷体";
     }
     hr{
         width: 94%;
@@ -333,18 +348,17 @@ export default {
         top:-12px;
         left: 137px;
         color: #aaa;
-        font-size: 14px;
-        font-family: "宋体";
+        font-size: 18px;
+        font-family: "楷体";
         background:#ece6e6;
     }
     .shopping{
-        margin-top: 20px;
         text-align: center;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         flex-wrap:wrap;
         width:94%;
-        margin: 0 auto;
+        margin:0 auto;
     }
     .shopping_product{
         width:45%;
@@ -352,15 +366,17 @@ export default {
         background: #fff;
         text-align: center;
         padding: 5px;
-
+        margin:10px 0;
     }
     .shopping_product>div:first-child img{
         width:100%;
     }
     .shopping_product>div:nth-child(2) span{
+        height:44px;
         display: inline-block;
         padding: 5px;
-        font-size: 13px;
+        font-family: "楷体";
+        font-size: 15px;
         font-weight: 700;
         text-align: left;
     }
@@ -370,5 +386,15 @@ export default {
         height:35px;
         line-height: 35px;
         padding: 5px;
+        font-family: "楷体";
+        font-size: 15px;
+        font-weight: 700;
+    }
+    .btn-more{
+        width:94%;
+        display: inline-block;
+        margin-left: 11px;
+        margin-top: 20px;
+        font-family: "楷体";
     }
 </style>
