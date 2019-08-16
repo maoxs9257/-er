@@ -14,7 +14,7 @@
                 购物车
             </mt-tab-container-item>
             <mt-tab-container-item id="tab-self">
-                我的
+                <user></user>
             </mt-tab-container-item>
         </mt-tab-container>
         <mt-tabbar v-model="active" fixed>
@@ -32,17 +32,20 @@
             </mt-tab-item>
             <mt-tab-item id="tab-self">
                 我的
-            </mt-tab-item>
-            
+            </mt-tab-item>           
         </mt-tabbar>
     </div>
 </template>
 <script>
+import user from './app/User.vue'
 export default {
     data(){
         return{
             active:"tab-first"
         }
+    },
+    components:{
+        user
     }
 }
 </script>

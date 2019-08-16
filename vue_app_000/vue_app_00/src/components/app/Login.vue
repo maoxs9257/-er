@@ -1,7 +1,7 @@
 <template>
     <div class="login">
         <div class="login_img">
-        <img  src="../../assets/ret.png" />
+        <img @click="retu" src="../../assets/ret.png" />
         </div>
         <div class="login_center">
             <span class="login_dl">
@@ -50,6 +50,9 @@ export default {
     methods:{
         reg_user(){
             this.$router.push("/Reg");
+        },
+        retu(){
+            history.go(-1);//返回上一级
         },
         xy(){
             this.$router.push("/Xy");

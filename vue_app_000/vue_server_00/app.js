@@ -98,15 +98,16 @@ server.get("/reg",(req,res)=>{
   })
 })
 
-// server.get("/product_n",(req,res)=>{
-//   var pid=req.query.pid;
-//   var sql="SELECT img_url,p_product FROM dd_product WHERE pid=?";
-//   pool.query(sql,[pid],(err,result)=>{
-//     if(err)throw err;
-//     res.send({code:1,msg:"查询成功",data:result});
-//     console.log(result);
-//   })
-// });
+// 查询优惠券
+server.get("/youhui",(req,res)=>{
+  var cid=req.query.cid;
+  if(!cid){cid=1}
+  var sql="SELECT cimg_url FROM dd_coupon WHERE cid=?";
+  pool.query(sql,[cid],(err,result)=>{
+    if(err)throw err;
+    res.send({code:1,msg:"查询成功",data:result});
+  })
+});
 
 //功能二:分页查询商品列表80-105
 //1:接收请求方式 GET 请求地址 /product

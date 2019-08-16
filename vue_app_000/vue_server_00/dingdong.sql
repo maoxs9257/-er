@@ -40,3 +40,11 @@ CREATE TABLE dd_shoppingCart (
   price DECIMAL(10,2),                      #商品价格
   pname VARCHAR(255)                        #商品名称
 );
+/*创建优惠券列表*/
+CREATE TABLE dd_coupon (
+  cid INT PRIMARY KEY AUTO_INCREMENT,       #优惠券id
+  cimg_url VARCHAR(255)                     #优惠券路径
+);
+INSERT INTO dd_coupon VALUES(
+  null,'youhui/youhui.png'
+);

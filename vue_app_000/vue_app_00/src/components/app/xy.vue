@@ -86,7 +86,7 @@ export default {
     },
     methods:{
         retu(){
-            this.$router.push("/Login");
+            history.go(-1);
         }
     }
 }

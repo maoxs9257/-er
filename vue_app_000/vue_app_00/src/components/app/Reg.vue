@@ -35,7 +35,7 @@ export default {
     },
     methods:{
         retu(){
-            this.$router.push("/Login");
+            history.go(-1);//返回上一级
         },
         xy(){
             this.$router.push("/Xy");

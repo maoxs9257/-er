@@ -6,7 +6,7 @@ import Reg from './components/app/Reg.vue'
 import Xy from './components/app/xy.vue'
 import User from './components/app/User.vue'
 import Shoppingcart from './components/app/Shoppingcart.vue'
-import Index from './components/app/index.vue'
+import Index from './components/index.vue'
 Vue.use(Router)
 export default new Router({
   routes: [

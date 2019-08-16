@@ -49,7 +49,7 @@
             </dir>
         </div>
         <div class="img_center">
-            <img src="../../assets/youhui.png" alt="">
+            <img :src="coupon" alt="">
         </div>
         <div class="use_cy">
             <p>常用功能</p>
@@ -116,11 +116,13 @@ export default {
     data(){
         return{
             list:[],//商品列表数组
-            pno:0
+            pno:0,
+            coupon:""
         }
     },
     created(){
         this.loadMore();
+        this.youhui();
     },
     methods:{
         dl_user(){
@@ -137,6 +139,12 @@ export default {
         },
         more_p(){
             this.loadMore();
+        },
+        youhui(){
+            var url="youhui";
+            this.axios.get(url).then(res=>{
+                this.coupon=res.data.data[0].cimg_url;
+            })
         }
 
     }
@@ -151,6 +159,7 @@ export default {
         width:100%;
         align-items:center;
         background-color:#ece6e6;
+        margin-bottom: 26px;
     }
     .header_top{
         width:100%;
@@ -347,7 +356,7 @@ export default {
         display:inline-block;
         position: relative;
         top:-12px;
-        left: 137px;
+        left: 120px;
         color: #aaa;
         font-size: 18px;
         font-family: "楷体";
