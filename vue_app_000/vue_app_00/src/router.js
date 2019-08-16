@@ -6,6 +6,7 @@ import Reg from './components/app/Reg.vue'
 import Xy from './components/app/xy.vue'
 import User from './components/app/User.vue'
 import Shoppingcart from './components/app/Shoppingcart.vue'
+import Index from './components/app/index.vue'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -14,6 +15,7 @@ export default new Router({
     {path:'/Reg',component:Reg},
     {path:'/Xy',component:Xy},
     {path:'/User',component:User},
-    {path:'/Shoppingcart',component:Shoppingcart}
+    {path:'/Shoppingcart',component:Shoppingcart},
+    {path:'/Index',component:Index}
   ]
 })

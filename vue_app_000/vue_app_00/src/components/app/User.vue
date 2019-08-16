@@ -168,7 +168,7 @@ export default {
         width:94%;
         margin:0 auto;
         display:flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         margin-bottom: 15px;
     }
@@ -188,16 +188,17 @@ export default {
     }
     .header>span:nth-child(2){
         font-family:"楷体";
-        font-size: 16px;
+        font-size: 20px;
         color:#fff;
         font-weight:700;
+        margin-left: -100px;
     }
     .header>span:nth-child(3){
         display: inline-block;
         font-family:"楷体";
         font-size: 16px;
         text-align: center;
-        margin-left: 120px;
+        /* margin-left: 120px; */
         width:115px;
         height:45px;
         background:rgba(90, 89, 89, 0.5);
