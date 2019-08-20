@@ -9,6 +9,7 @@ import Shoppingcart from './components/app/Shoppingcart.vue'
 import Index from './components/index.vue'
 import Titlebar from './components/app/Titlebar.vue'
 import Carousel from './components/app/Carousel.vue'
+import HomePage from './components/app/HomePage.vue'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -20,6 +21,7 @@ export default new Router({
     {path:'/Shoppingcart',component:Shoppingcart},
     {path:'/Index',component:Index},
     {path:'/Titlebar',component:Titlebar},
-    {path:'/Carousel',component:Carousel}
+    {path:'/Carousel',component:Carousel},
+    {path:'/HomePage',component:HomePage}
   ]
 })

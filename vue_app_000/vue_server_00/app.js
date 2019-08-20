@@ -118,6 +118,16 @@ server.get("/carousel",(req,res)=>{
     res.send({code:1,msg:"查询成功",data:result});
   });
 });
+// 查询导航列表
+// http://127.0.0.1:3001/gpi?
+server.get("/gpi",(req,res)=>{
+  var sql="SELECT gimg_url,title FROM dd_gp";
+  pool.query(sql,(err,result)=>{
+    if(err)throw err;
+    res.send({code:1,msg:"查询成功",data:result});
+  })
+})
+
 
 //功能二:分页查询商品列表80-105
 //1:接收请求方式 GET 请求地址 /product

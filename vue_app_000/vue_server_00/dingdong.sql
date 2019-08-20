@@ -53,8 +53,23 @@ CREATE TABLE dd_carousel (
   aimg_url VARCHAR(255)                    #轮播图路径
 );
 /*插入轮播图数据*/
-INSERT INTO dd_carousel VALUES(null,'http://127.0.0.1:3001/carousel/bine1.png');
-INSERT INTO dd_carousel VALUES(null,'http://127.0.0.1:3001/carousel/bine2.png');
-INSERT INTO dd_carousel VALUES(null,'http://127.0.0.1:3001/carousel/bine3.png');
-INSERT INTO dd_carousel VALUES(null,'http://127.0.0.1:3001/carousel/bine4.png');
-INSERT INTO dd_carousel VALUES(null,'http://127.0.0.1:3001/carousel/bine5.png');
+INSERT INTO dd_carousel VALUES(null,'http://127.0.0.1:3001/carousel/bine1.jpg');
+INSERT INTO dd_carousel VALUES(null,'http://127.0.0.1:3001/carousel/bine2.jpg');
+INSERT INTO dd_carousel VALUES(null,'http://127.0.0.1:3001/carousel/bine3.jpg');
+INSERT INTO dd_carousel VALUES(null,'http://127.0.0.1:3001/carousel/bine4.jpg');
+INSERT INTO dd_carousel VALUES(null,'http://127.0.0.1:3001/carousel/bine5.jpg');
+/*创建导航数据列表*/
+CREATE TABLE dd_gp (
+  gid INT PRIMARY KEY AUTO_INCREMENT,         #id
+  gimg_url VARCHAR(255),                  #图片路径
+  title  VARCHAR(50)                      #标题
+);
+/*插入数据*/
+INSERT INTO dd_gp VALUES (null,'http://127.0.0.1:3001/gp/c-1.png','买二付一');
+INSERT INTO dd_gp VALUES (null,'http://127.0.0.1:3001/gp/c-2.png','原箱佳沛');
+INSERT INTO dd_gp VALUES (null,'http://127.0.0.1:3001/gp/c-3.png','会员福利');
+INSERT INTO dd_gp VALUES (null,'http://127.0.0.1:3001/gp/c-4.png','银行活动');
+INSERT INTO dd_gp VALUES (null,'http://127.0.0.1:3001/gp/c-5.png','新品惠萃');
+INSERT INTO dd_gp VALUES (null,'http://127.0.0.1:3001/gp/c-6.png','精选肉类');
+INSERT INTO dd_gp VALUES (null,'http://127.0.0.1:3001/gp/c-7.png','海鲜水产');
+INSERT INTO dd_gp VALUES (null,'http://127.0.0.1:3001/gp/c-8.png','食品饮料');
