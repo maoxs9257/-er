@@ -109,6 +109,15 @@ server.get("/youhui",(req,res)=>{
     res.send({code:1,msg:"查询成功",data:result});
   })
 });
+// 查询轮播图
+// http://127.0.0.1:3001/carousel?
+server.get("/carousel",(req,res)=>{
+  var sql="SELECT * FROM dd_carousel";
+  pool.query(sql,(err,result)=>{
+    if(err)throw err;
+    res.send({code:1,msg:"查询成功",data:result});
+  });
+});
 
 //功能二:分页查询商品列表80-105
 //1:接收请求方式 GET 请求地址 /product

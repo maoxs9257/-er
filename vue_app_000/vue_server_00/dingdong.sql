@@ -47,3 +47,14 @@ CREATE TABLE dd_coupon (
 INSERT INTO dd_coupon VALUES(
   null,'http://127.0.0.1:3001/youhui/youhui.png'
 );
+/*创建轮播图数据列表*/
+CREATE TABLE dd_carousel (
+  aid INT PRIMARY KEY AUTO_INCREMENT,      #轮播图id
+  aimg_url VARCHAR(255)                    #轮播图路径
+);
+/*插入轮播图数据*/
+INSERT INTO dd_carousel VALUES(null,'http://127.0.0.1:3001/carousel/bine1.png');
+INSERT INTO dd_carousel VALUES(null,'http://127.0.0.1:3001/carousel/bine2.png');
+INSERT INTO dd_carousel VALUES(null,'http://127.0.0.1:3001/carousel/bine3.png');
+INSERT INTO dd_carousel VALUES(null,'http://127.0.0.1:3001/carousel/bine4.png');
+INSERT INTO dd_carousel VALUES(null,'http://127.0.0.1:3001/carousel/bine5.png');

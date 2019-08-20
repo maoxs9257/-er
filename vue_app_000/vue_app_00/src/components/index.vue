@@ -2,8 +2,8 @@
     <div>
         <mt-tab-container v-model="active">
             <mt-tab-container-item id="tab-first">
-
-                首页
+                <titlebar></titlebar>
+                <carousel></carousel>
             </mt-tab-container-item>
             <mt-tab-container-item id="tab-fenlei">
                 分类
@@ -65,6 +65,8 @@
 <script>
 import User from './app/User.vue'
 import TabBaricon from './app/TabBarIcon.vue'
+import Titlebar from './app/Titlebar.vue'
+import Carousel from './app/Carousel.vue'
 export default {
     data(){
         return{
@@ -81,7 +83,9 @@ export default {
     },
     components:{
         "user":User,
-        "tabbaricon":TabBaricon
+        "tabbaricon":TabBaricon,
+        "titlebar":Titlebar,
+        "carousel":Carousel
     },
     methods:{
         changeState(n){

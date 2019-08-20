@@ -7,6 +7,8 @@ import Xy from './components/app/xy.vue'
 import User from './components/app/User.vue'
 import Shoppingcart from './components/app/Shoppingcart.vue'
 import Index from './components/index.vue'
+import Titlebar from './components/app/Titlebar.vue'
+import Carousel from './components/app/Carousel.vue'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -16,6 +18,8 @@ export default new Router({
     {path:'/Xy',component:Xy},
     {path:'/User',component:User},
     {path:'/Shoppingcart',component:Shoppingcart},
-    {path:'/Index',component:Index}
+    {path:'/Index',component:Index},
+    {path:'/Titlebar',component:Titlebar},
+    {path:'/Carousel',component:Carousel}
   ]
 })
