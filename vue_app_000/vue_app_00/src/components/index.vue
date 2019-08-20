@@ -2,6 +2,7 @@
     <div>
         <mt-tab-container v-model="active">
             <mt-tab-container-item id="tab-first">
+
                 首页
             </mt-tab-container-item>
             <mt-tab-container-item id="tab-fenlei">
@@ -18,34 +19,80 @@
             </mt-tab-container-item>
         </mt-tab-container>
         <mt-tabbar v-model="active" fixed>
-            <mt-tab-item id="tab-first">
+            <mt-tab-item id="tab-first" @click.native="changeState(0)">
+                <tabbaricon 
+                    :selectedImage="require('../assets/hand1.png')" 
+                    :normalImage="require('../assets/hand.png')" 
+                    :focused="currentIndex[0].isSelect">
+                </tabbaricon>
                 首页
             </mt-tab-item>
-            <mt-tab-item id="tab-fenlei">
+            <mt-tab-item id="tab-fenlei" @click.native="changeState(1)">
+                <tabbaricon 
+                    :selectedImage="require('../assets/fl.png')" 
+                    :normalImage="require('../assets/fl1.png')" 
+                    :focused="currentIndex[1].isSelect">
+                </tabbaricon>
                 分类
             </mt-tab-item>
-            <mt-tab-item id="tab-eat">
+            <mt-tab-item id="tab-eat" @click.native="changeState(2)">
+                <tabbaricon 
+                    :selectedImage="require('../assets/eat1.png')" 
+                    :normalImage="require('../assets/eat.png')" 
+                    :focused="currentIndex[2].isSelect">
+                </tabbaricon>
                 吃什么
             </mt-tab-item>
-            <mt-tab-item id="shopping-cart">
+            <mt-tab-item id="shopping-cart" @click.native="changeState(3)">
+                <tabbaricon 
+                    :selectedImage="require('../assets/cart3.png')" 
+                    :normalImage="require('../assets/cart2.png')" 
+                    :focused="currentIndex[3].isSelect">
+                </tabbaricon>
                 购物车
             </mt-tab-item>
-            <mt-tab-item id="tab-self">
+            <mt-tab-item id="tab-self" @click.native="changeState(4)">
+                <tabbaricon 
+                    :selectedImage="require('../assets/self.png')" 
+                    :normalImage="require('../assets/self1.png')" 
+                    :focused="currentIndex[4].isSelect">
+                </tabbaricon>
                 我的
             </mt-tab-item>           
         </mt-tabbar>
     </div>
 </template>
 <script>
-import user from './app/User.vue'
+import User from './app/User.vue'
+import TabBaricon from './app/TabBarIcon.vue'
 export default {
     data(){
         return{
-            active:"tab-first"
+            active:"tab-first",
+            //创建数组保存图片焦点状态
+            currentIndex:[
+                {isSelect:true},
+                {isSelect:false},
+                {isSelect:false},
+                {isSelect:false},
+                {isSelect:false}
+            ]
         }
     },
     components:{
-        user
+        "user":User,
+        "tabbaricon":TabBaricon
+    },
+    methods:{
+        changeState(n){
+            for (var i=0;i<this.currentIndex.length;i++){
+                if(i==n){
+                    this.currentIndex[i].isSelect=true;
+                }else{
+                    this.currentIndex[i].isSelect=false;
+                }
+            }
+        }
     }
 }
 </script>
