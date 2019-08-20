@@ -78,7 +78,8 @@ export default {
                     this.$toast("用户名或密码有误");
                 }else{
                     // 登录成功，跳转
-                    this.$router.push("/Reg");
+                    this.$toast("登录成功");
+                    this.$router.push("/Index");
                 }
             })
         }

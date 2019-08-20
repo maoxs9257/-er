@@ -99,6 +99,7 @@ server.get("/reg",(req,res)=>{
 })
 
 // 查询优惠券
+// http://127.0.0.1:3001/youhui?cid=1
 server.get("/youhui",(req,res)=>{
   var cid=req.query.cid;
   if(!cid){cid=1}

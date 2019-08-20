@@ -64,7 +64,8 @@ export default {
                 }else if(res.data.code==-2){
                     this.$toast("用户名已存在");
                 }else{
-                    // 登录成功，跳转
+                    // 注册成功，跳转
+                    this.$toast("注册成功");
                     this.$router.push("/Login");
                 }
             });

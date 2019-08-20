@@ -50,5 +50,11 @@ export default {
 }
 </script>
 <style scoped>
-
+.mint-tabbar > .mint-tab-item.is-selected{
+    color:lime;
+}
+.mint-tab-item-label{
+    font-size: 16px;
+    font-family:"楷体";
+}
 </style>
