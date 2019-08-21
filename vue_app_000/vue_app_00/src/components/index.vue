@@ -4,6 +4,7 @@
             <mt-tab-container-item id="tab-first">
                 <titlebar></titlebar>
                 <carousel></carousel>
+                <homepage></homepage>
             </mt-tab-container-item>
             <mt-tab-container-item id="tab-fenlei">
                 分类
@@ -67,6 +68,7 @@ import User from './app/User.vue'
 import TabBaricon from './app/TabBarIcon.vue'
 import Titlebar from './app/Titlebar.vue'
 import Carousel from './app/Carousel.vue'
+import HomePage from './app/HomePage.vue'
 export default {
     data(){
         return{
@@ -85,7 +87,8 @@ export default {
         "user":User,
         "tabbaricon":TabBaricon,
         "titlebar":Titlebar,
-        "carousel":Carousel
+        "carousel":Carousel,
+        "homepage":HomePage
     },
     methods:{
         changeState(n){

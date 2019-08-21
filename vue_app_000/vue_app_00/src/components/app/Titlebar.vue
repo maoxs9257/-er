@@ -50,6 +50,7 @@ export default {
    position: fixed;
    top:0;
    left: 0;
+   z-index: 100;
 }
 .i-img{
    position: fixed;
@@ -66,5 +67,6 @@ input{
    border:none;
    border-radius: 25px;
    margin-left:16px;
+   outline: 0;
 }
 </style>

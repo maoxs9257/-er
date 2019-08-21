@@ -10,6 +10,8 @@ import Index from './components/index.vue'
 import Titlebar from './components/app/Titlebar.vue'
 import Carousel from './components/app/Carousel.vue'
 import HomePage from './components/app/HomePage.vue'
+import Gh from './components/app/Gh.vue'
+import Th from './components/app/Th.vue'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -22,6 +24,8 @@ export default new Router({
     {path:'/Index',component:Index},
     {path:'/Titlebar',component:Titlebar},
     {path:'/Carousel',component:Carousel},
-    {path:'/HomePage',component:HomePage}
+    {path:'/HomePage',component:HomePage},
+    {path:'/Gh',component:Gh},
+    {path:'/Th',component:Th}
   ]
 })
