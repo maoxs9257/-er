@@ -1,38 +1,13 @@
 <template>
    <div class="merrec">
-      <div class="merrec-pro">
-         <span class="merrec-img"><img src="../../assets/merrec/mer-1.jpg" alt=""></span>
-         <span>直降29元</span>
-         <span>泰国金枕榴莲礼盒装1个（1.5-2.5kg/个）</span>
-         <span class="merrec-price">
-            <span>￥99</span>
-            <img src="../../assets/cart.png" alt="">
+      <div class="merrec-pro" v-for="(item,i) of list" :key="i">
+         <span class="merrec-img">
+            <img :src="`http://127.0.0.1:3001/`+item.mimg_url" alt="">
          </span>
-      </div>
-      <div class="merrec-pro">
-         <span class="merrec-img"><img src="../../assets/merrec/mer-1.jpg" alt=""></span>
-         <span>直降29元</span>
-         <span>泰国金枕榴莲礼盒装1个（1.5-2.5kg/个）</span>
+         <span>{{item.preference}}</span>
+         <span>{{item.title}}</span>
          <span class="merrec-price">
-            <span>￥99</span>
-            <img src="../../assets/cart.png" alt="">
-         </span>
-      </div>
-      <div class="merrec-pro">
-         <span class="merrec-img"><img src="../../assets/merrec/mer-1.jpg" alt=""></span>
-         <span>直降29元</span>
-         <span>泰国金枕榴莲礼盒装1个（1.5-2.5kg/个）</span>
-         <span class="merrec-price">
-            <span>￥99</span>
-            <img src="../../assets/cart.png" alt="">
-         </span>
-      </div>
-      <div class="merrec-pro">
-         <span class="merrec-img"><img src="../../assets/merrec/mer-1.jpg" alt=""></span>
-         <span>直降29元</span>
-         <span>泰国金枕榴莲礼盒装1个（1.5-2.5kg/个）</span>
-         <span class="merrec-price">
-            <span>￥99</span>
+            <span>￥{{item.price}}</span>
             <img src="../../assets/cart.png" alt="">
          </span>
       </div>
@@ -41,7 +16,24 @@
 <script>
 export default {
    data(){
-      return{}
+      return{
+         list:[],
+         did:1
+      }
+   },
+   created(){
+      this.loadmore();
+   },
+   methods:{
+      loadmore(){
+         var url="merrec";
+         var obj={did:this.did};
+         this.axios.get(url,{params:obj}).then(res=>{
+            var rows=this.list.concat(res.data.data);
+            this.list=rows;
+            // console.log(this.list);
+         })
+      }
    }
 }
 </script>
@@ -52,6 +44,7 @@ export default {
 }
 .merrec{
    width:94%;
+   height:208px;
    margin:0 auto;
    display: flex;
    justify-content:space-between;
@@ -68,14 +61,14 @@ export default {
 }
 .merrec>.merrec-pro>span:nth-child(2){
    display: inline-block;
-   width:62px;
+   width:73px;
    height: 20px;
    position: relative;
    top:-23px;
-   padding:0 10px ;
-   font-size:15px;
+   padding:0 3px ;
+   text-align: center;
+   font-size:10px;
    font-family: "楷体";
-   font-weight: 700;
    color:#fff;
    line-height: 20px;
    background: #fb3d3d;

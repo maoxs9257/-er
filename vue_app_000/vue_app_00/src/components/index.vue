@@ -5,6 +5,7 @@
                 <titlebar></titlebar>
                 <carousel></carousel>
                 <homepage></homepage>
+                <merrec></merrec>
             </mt-tab-container-item>
             <mt-tab-container-item id="tab-fenlei">
                 分类
@@ -69,6 +70,7 @@ import TabBaricon from './app/TabBarIcon.vue'
 import Titlebar from './app/Titlebar.vue'
 import Carousel from './app/Carousel.vue'
 import HomePage from './app/HomePage.vue'
+import MerRec from './app/MerRec.vue'
 export default {
     data(){
         return{
@@ -88,7 +90,8 @@ export default {
         "tabbaricon":TabBaricon,
         "titlebar":Titlebar,
         "carousel":Carousel,
-        "homepage":HomePage
+        "homepage":HomePage,
+        "merrec":MerRec
     },
     methods:{
         changeState(n){
