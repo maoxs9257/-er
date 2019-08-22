@@ -23,13 +23,13 @@ CREATE TABLE dd_product(
 );
 /*插入商品详情信息*/
 INSERT INTO dd_product VALUES(null,'百威啤酒 500ml*3罐','清爽 清醇 清澈 致敬真我 （新老包装随机发货）',25.90,'baiwei/baiwei.jpg','baiwei/product.jpg,baiwei/product2.png,baiwei/product3.png,baiwei/product4.png');
-INSERT INTO dd_product VALUES(null,'派力特 休闲零食 掌心干脆面','办公室休闲零食方便面 干吃面 混合口味 50包1050g',24.80,'cm/gancuim.png','gcm/gcm1.png,gcm/gcm2.png,gcm/gcm3.png,gcm/gcm4.png,gcm/gcm5.png,gcm/gcm4.png');
+INSERT INTO dd_product VALUES(null,'派力特 休闲零食 掌心干脆面','办公室休闲零食方便面 干吃面 混合口味 50包1050g',24.80,'gcm/gancuim.png','gcm/gcm1.png,gcm/gcm2.png,gcm/gcm3.png,gcm/gcm4.png,gcm/gcm5.png,gcm/gcm4.png');
 INSERT INTO dd_product VALUES(null,'百威啤酒 500ml*3罐','清爽 清醇 清澈 致敬真我 （新老包装随机发货）',25.90,'baiwei/baiwei.jpg','baiwei/product.jpg,baiwei/product2.png,baiwei/product3.png,baiwei/product4.png');
-INSERT INTO dd_product VALUES(null,'派力特 休闲零食 掌心干脆面','办公室休闲零食方便面 干吃面 混合口味 50包1050g',24.80,'cm/gancuim.png','gcm/gcm1.png,gcm/gcm2.png,gcm/gcm3.png,gcm/gcm4.png,gcm/gcm5.png,gcm/gcm4.png');
+INSERT INTO dd_product VALUES(null,'派力特 休闲零食 掌心干脆面','办公室休闲零食方便面 干吃面 混合口味 50包1050g',24.80,'gcm/gancuim.png','gcm/gcm1.png,gcm/gcm2.png,gcm/gcm3.png,gcm/gcm4.png,gcm/gcm5.png,gcm/gcm4.png');
 INSERT INTO dd_product VALUES(null,'百威啤酒 500ml*3罐','清爽 清醇 清澈 致敬真我 （新老包装随机发货）',25.90,'baiwei/baiwei.jpg','baiwei/product.jpg,baiwei/product2.png,baiwei/product3.png,baiwei/product4.png');
-INSERT INTO dd_product VALUES(null,'派力特 休闲零食 掌心干脆面','办公室休闲零食方便面 干吃面 混合口味 50包1050g',24.80,'cm/gancuim.png','gcm/gcm1.png,gcm/gcm2.png,gcm/gcm3.png,gcm/gcm4.png,gcm/gcm5.png,gcm/gcm4.png');
+INSERT INTO dd_product VALUES(null,'派力特 休闲零食 掌心干脆面','办公室休闲零食方便面 干吃面 混合口味 50包1050g',24.80,'gcm/gancuim.png','gcm/gcm1.png,gcm/gcm2.png,gcm/gcm3.png,gcm/gcm4.png,gcm/gcm5.png,gcm/gcm4.png');
 INSERT INTO dd_product VALUES(null,'百威啤酒 500ml*3罐','清爽 清醇 清澈 致敬真我 （新老包装随机发货）',25.90,'baiwei/baiwei.jpg','baiwei/product.jpg,baiwei/product2.png,baiwei/product3.png,baiwei/product4.png');
-INSERT INTO dd_product VALUES(null,'派力特 休闲零食 掌心干脆面','办公室休闲零食方便面 干吃面 混合口味 50包1050g',24.80,'cm/gancuim.png','gcm/gcm1.png,gcm/gcm2.png,gcm/gcm3.png,gcm/gcm4.png,gcm/gcm5.png,gcm/gcm4.png');
+INSERT INTO dd_product VALUES(null,'派力特 休闲零食 掌心干脆面','办公室休闲零食方便面 干吃面 混合口味 50包1050g',24.80,'gcm/gancuim.png','gcm/gcm1.png,gcm/gcm2.png,gcm/gcm3.png,gcm/gcm4.png,gcm/gcm5.png,gcm/gcm4.png');
 /*创建购物车列表*/
 CREATE TABLE dd_shoppingCart (
   sid INT PRIMARY KEY AUTO_INCREMENT,       #购物车商品编号
