@@ -138,6 +138,18 @@ server.get("/merrec",(req,res)=>{
   })
 })
 
+
+//查询首页广告商品图片
+//http://127.0.0.1:3001/prod_img?iid=1
+server.get("/prod_img",(req,res)=>{
+  var iid=req.query.iid;
+  var sql="SELECT iimg_url FROM dd_prod_img WHERE iid=?";
+  pool.query(sql,[iid],(err,result)=>{
+    if(err)throw err;
+    res.send({code:1,msg:"查询成功",data:result});
+  })
+})
+
 //功能二:分页查询商品列表80-105
 //1:接收请求方式 GET 请求地址 /product
 server.get("/product",(req,res)=>{

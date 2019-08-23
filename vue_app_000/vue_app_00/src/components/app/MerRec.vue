@@ -1,5 +1,5 @@
 <template>
-   <div class="father">
+   <div>
       <div class="merrec">
          <div class="merrec-pro" v-for="(item,i) of list" :key="i">
             <span class="merrec-img">
@@ -12,16 +12,6 @@
                <img src="../../assets/cart.png" alt="">
             </span>
          </div>
-      </div>
-      <div class="prod_img">
-         <img src="../../assets/product_img/pi-1.jpg" alt="">
-         <img src="../../assets/product_img/pi-2.jpg" alt="">
-         <img src="../../assets/product_img/pi-3.jpg" alt="">
-         <img src="../../assets/product_img/pi-4.jpg" alt="">
-         <img src="../../assets/product_img/pi-5.jpg" alt="">
-         <img src="../../assets/product_img/pi-6.jpg" alt="">
-         <img src="../../assets/product_img/pi-7.jpg" alt="">
-         <img src="../../assets/product_img/pi-8.jpg" alt="">
       </div>
    </div>
 </template>
@@ -50,9 +40,6 @@ export default {
 }
 </script>
 <style scoped>
-.father{
-   padding-bottom: 57px;
-}
 *{
    margin: 0;
    padding: 0;
@@ -117,13 +104,5 @@ export default {
 }
 .merrec-price>img{
    width:25px;
-}
-.prod_img{
-   width:100%;
-   display: flex;
-   flex-direction: column;
-}
-.prod_img>img{
-   width:100%;
 }
 </style>

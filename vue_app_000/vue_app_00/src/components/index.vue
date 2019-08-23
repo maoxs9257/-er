@@ -1,11 +1,12 @@
 <template>
-    <div>
+    <div class="father">
         <mt-tab-container v-model="active">
             <mt-tab-container-item id="tab-first">
                 <titlebar></titlebar>
                 <carousel></carousel>
                 <homepage></homepage>
                 <merrec></merrec>
+                <prod></prod>
             </mt-tab-container-item>
             <mt-tab-container-item id="tab-fenlei">
                 分类
@@ -71,6 +72,7 @@ import Titlebar from './app/Titlebar.vue'
 import Carousel from './app/Carousel.vue'
 import HomePage from './app/HomePage.vue'
 import MerRec from './app/MerRec.vue'
+import Prod_img from './app/Prod_img.vue'
 export default {
     data(){
         return{
@@ -91,7 +93,8 @@ export default {
         "titlebar":Titlebar,
         "carousel":Carousel,
         "homepage":HomePage,
-        "merrec":MerRec
+        "merrec":MerRec,
+        "prod":Prod_img
     },
     methods:{
         changeState(n){
@@ -113,5 +116,8 @@ export default {
 .mint-tab-item-label{
     font-size: 16px;
     font-family:"楷体";
+}
+.father{
+   padding-bottom: 57px;
 }
 </style>
