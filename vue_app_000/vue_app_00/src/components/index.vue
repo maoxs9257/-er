@@ -5,8 +5,9 @@
                 <titlebar></titlebar>
                 <carousel></carousel>
                 <homepage></homepage>
-                <merrec></merrec>
+                <merrec did="1"></merrec>
                 <prod></prod>
+                <merrec did="2"></merrec>
             </mt-tab-container-item>
             <mt-tab-container-item id="tab-fenlei">
                 分类
@@ -84,7 +85,7 @@ export default {
                 {isSelect:false},
                 {isSelect:false},
                 {isSelect:false}
-            ]
+            ], 
         }
     },
     components:{

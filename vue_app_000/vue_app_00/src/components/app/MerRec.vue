@@ -17,10 +17,10 @@
 </template>
 <script>
 export default {
+   props:{did:{default:""}},//接收父组件传递过来的did值
    data(){
       return{
-         list:[],
-         did:1
+         list:[]
       }
    },
    created(){
@@ -31,7 +31,7 @@ export default {
          var url="merrec";
          var obj={did:this.did};
          this.axios.get(url,{params:obj}).then(res=>{
-            var rows=this.list.concat(res.data.data);
+            var rows=res.data.data;
             this.list=rows;
             // console.log(this.list);
          })
