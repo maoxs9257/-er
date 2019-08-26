@@ -5,9 +5,11 @@
 </template>
 <script>
 export default {
+   props:{bid:{default:""}},
    data(){
       return{}
-   }
+   },
+   
 }
 </script>
 <style scoped>
