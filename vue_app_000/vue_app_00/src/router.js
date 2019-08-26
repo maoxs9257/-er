@@ -13,6 +13,7 @@ import HomePage from './components/app/HomePage.vue'
 import Gh from './components/app/Gh.vue'
 import Th from './components/app/Th.vue'
 import MerRec from './components/app/MerRec.vue'
+import BigImg from './components/app/BigImg.vue'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -28,6 +29,7 @@ export default new Router({
     {path:'/HomePage',component:HomePage},
     {path:'/Gh',component:Gh},
     {path:'/Th',component:Th},
-    {path:'/MerRec',component:MerRec}
+    {path:'/MerRec',component:MerRec},
+    {path:'/BigImg',component:BigImg}
   ]
 })

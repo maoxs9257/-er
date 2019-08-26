@@ -131,3 +131,20 @@ CREATE TABLE dd_prod_img (
   iimg_url VARCHAR(255)                          #广告图片路径
 );
 INSERT INTO dd_prod_img VALUES (null,1,'product_img/1/pi-1.jpg,product_img/1/pi-2.jpg,product_img/1/pi-3.jpg,product_img/1/pi-4.jpg,product_img/1/pi-5.jpg,product_img/1/pi-6.jpg,product_img/1/pi-7.jpg,product_img/1/pi-8.jpg');
+ 
+/*创建首页大图数据*/
+CREATE TABLE dd_bigimg (
+  id INT PRIMARY KEY AUTO_INCREMENT,                #大图id
+  bid INT,                                      #图片类型id
+  bimg_url VARCHAR(255)                         #大图路径
+);
+/*插入数据*/
+INSERT INTO dd_bigimg VALUES (null,1,'bigimg/bi-1.jpg');
+INSERT INTO dd_bigimg VALUES (null,2,'bigimg/bi-2.jpg');
+INSERT INTO dd_bigimg VALUES (null,3,'bigimg/bi-3.jpg');
+INSERT INTO dd_bigimg VALUES (null,4,'bigimg/bi-4.jpg');
+INSERT INTO dd_bigimg VALUES (null,5,'bigimg/bi-5.jpg');
+INSERT INTO dd_bigimg VALUES (null,6,'bigimg/bi-6.jpg');
+INSERT INTO dd_bigimg VALUES (null,7,'bigimg/bi-7.jpg');
+INSERT INTO dd_bigimg VALUES (null,8,'bigimg/bi-8.jpg');
+INSERT INTO dd_bigimg VALUES (null,9,'bigimg/bi-9.jpg');
