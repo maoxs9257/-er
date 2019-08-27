@@ -28,7 +28,8 @@
                 <merrec did="2"></merrec>
             </mt-tab-container-item>
             <mt-tab-container-item id="tab-fenlei">
-                分类
+                <search></search>
+                <product></product>
             </mt-tab-container-item>
             <mt-tab-container-item id="tab-eat">
                 吃什么
@@ -93,6 +94,8 @@ import HomePage from './app/HomePage.vue'
 import MerRec from './app/MerRec.vue'
 import Prod_img from './app/Prod_img.vue'
 import BigImg from './app/BigImg.vue'
+import Search from './app/Search'
+import Product_s from './app/Product_s'
 export default {
     data(){
         return{
@@ -115,7 +118,9 @@ export default {
         "homepage":HomePage,
         "merrec":MerRec,
         "prod":Prod_img,
-        "bigimg":BigImg
+        "bigimg":BigImg,
+        "search":Search,
+        "product":Product_s
     },
     methods:{
         changeState(n){

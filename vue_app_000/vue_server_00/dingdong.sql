@@ -134,7 +134,7 @@ INSERT INTO dd_prod_img VALUES (null,1,'product_img/1/pi-1.jpg,product_img/1/pi-
  
 /*创建首页大图数据*/
 CREATE TABLE dd_bigimg (
-  id INT PRIMARY KEY AUTO_INCREMENT,                #大图id
+  id INT PRIMARY KEY AUTO_INCREMENT,            #大图id
   bid INT,                                      #图片类型id
   bimg_url VARCHAR(255)                         #大图路径
 );

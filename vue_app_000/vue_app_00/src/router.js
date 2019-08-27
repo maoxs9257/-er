@@ -14,6 +14,7 @@ import Gh from './components/app/Gh.vue'
 import Th from './components/app/Th.vue'
 import MerRec from './components/app/MerRec.vue'
 import BigImg from './components/app/BigImg.vue'
+import Search from './components/app/Search.vue'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -30,6 +31,7 @@ export default new Router({
     {path:'/Gh',component:Gh},
     {path:'/Th',component:Th},
     {path:'/MerRec',component:MerRec},
-    {path:'/BigImg',component:BigImg}
+    {path:'/BigImg',component:BigImg},
+    {path:'/Search',component:Search}
   ]
 })
