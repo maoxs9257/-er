@@ -3,7 +3,8 @@
       <div class="merrec">
          <div class="merrec-pro" v-for="(item,i) of list" :key="i">
             <span class="merrec-img">
-               <img :src="`http://127.0.0.1:3001/`+item.mimg_url" alt="">
+               <!-- 图片懒加载 -->
+               <img v-lazy="`http://127.0.0.1:3001/`+item.mimg_url" alt="">
             </span>
             <span>{{item.preference}}</span>
             <span>{{item.title}}</span>

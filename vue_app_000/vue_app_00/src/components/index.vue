@@ -5,27 +5,27 @@
                 <titlebar></titlebar>
                 <carousel></carousel>
                 <homepage></homepage>
-                <merrec did="1"></merrec>
+                <merrec :did="1"></merrec>
                 <prod></prod>
-                <merrec did="2"></merrec>
-                <bigimg bid="1"></bigimg>
-                <merrec did="2"></merrec>
-                <bigimg bid="2"></bigimg>
-                <merrec did="1"></merrec>
-                <bigimg bid="3"></bigimg>
-                <merrec did="2"></merrec>
-                <bigimg bid="4"></bigimg>
-                <merrec did="1"></merrec>
-                <bigimg bid="5"></bigimg>
-                <merrec did="2"></merrec>
-                <bigimg bid="6"></bigimg>
-                <merrec did="1"></merrec>
-                <bigimg bid="7"></bigimg>
-                <merrec did="2"></merrec>
-                <bigimg bid="8"></bigimg>
-                <merrec did="1"></merrec>
-                <bigimg bid="9"></bigimg>
-                <merrec did="2"></merrec>
+                <merrec :did="2"></merrec>
+                <bigimg :bid="1"></bigimg>
+                <merrec :did="2"></merrec>
+                <bigimg :bid="2"></bigimg>
+                <merrec :did="1"></merrec>
+                <bigimg :bid="3"></bigimg>
+                <merrec :did="2"></merrec>
+                <bigimg :bid="4"></bigimg>
+                <merrec :did="1"></merrec>
+                <bigimg :bid="5"></bigimg>
+                <merrec :did="2"></merrec>
+                <bigimg :bid="6"></bigimg>
+                <merrec :did="1"></merrec>
+                <bigimg :bid="7"></bigimg>
+                <merrec :did="2"></merrec>
+                <bigimg :bid="8"></bigimg>
+                <merrec :did="1"></merrec>
+                <bigimg :bid="9"></bigimg>
+                <merrec :did="2"></merrec>
             </mt-tab-container-item>
             <mt-tab-container-item id="tab-fenlei">
                 <search></search>

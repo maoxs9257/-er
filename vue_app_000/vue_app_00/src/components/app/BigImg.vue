@@ -1,6 +1,7 @@
 <template>
    <div class="bigimg">
-      <img :src="`http://127.0.0.1:3001/`+rows" alt="">
+      <!-- 图片懒加载 -->
+      <img v-lazy="`http://127.0.0.1:3001/`+rows" alt="">
    </div>
 </template>
 <script>

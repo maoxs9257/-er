@@ -160,6 +160,17 @@ server.get("/bigimg",(req,res)=>{
   });
 })
 
+//查询商品详情信息
+//http://127.0.0.1:3001/loadpro?lid=1
+server.get("/loadpro",(req,res)=>{
+  var lid=req.query.lid;
+  var sql="SELECT mimg_url,name FROM dd_merrec WHERE lid=?";
+  pool.query(sql,[lid],(err,result)=>{
+    if (err) throw err;
+    res.send({code:1,msg:"查询成功",data:result});
+  })
+})
+
 //功能二:分页查询商品列表80-105
 //1:接收请求方式 GET 请求地址 /product
 server.get("/product",(req,res)=>{
