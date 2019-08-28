@@ -7,10 +7,10 @@
          </div>
       </div>
       <div class="gif-cent">
-         <img src="../../assets/p-p1.gif" alt="">
+         <img src="../../../assets/p-p1.gif" alt="">
       </div>
       <div class="cpn-i">
-         <span><img src="../../assets/news.png" alt=""></span>
+         <span><img src="../../../assets/news.png" alt=""></span>
          <!-- html中marquee跑马灯效果 -->
          <marquee direction="up" height="25" width="300" scrollamount="2" onmouseover="this.stop()" onmouseOut="this.start()">
             <p @click="thgo">营业资质公示，详情请点击查询</p>
@@ -22,7 +22,7 @@
          </marquee>
       </div>
       <div class="xianshi">
-         <img src="../../assets/xianshi.jpg" alt="">
+         <img src="../../../assets/xianshi.jpg" alt="">
       </div>
    </div>
 </template>

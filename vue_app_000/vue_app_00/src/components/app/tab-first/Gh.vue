@@ -1,13 +1,13 @@
 <template>
    <div class="gh">
-      <img src="../../assets/gh/gh-1.jpg" alt="">
-      <img src="../../assets/gh/gh-2.jpg" alt="">
-      <img src="../../assets/gh/gh-3.jpg" alt="">
-      <img src="../../assets/gh/gh-4.jpg" alt="">
-      <img src="../../assets/gh/gh-5.jpg" alt="">
-      <img src="../../assets/gh/gh-6.jpg" alt="">
+      <img src="../../../assets/gh/gh-1.jpg" alt="">
+      <img src="../../../assets/gh/gh-2.jpg" alt="">
+      <img src="../../../assets/gh/gh-3.jpg" alt="">
+      <img src="../../../assets/gh/gh-4.jpg" alt="">
+      <img src="../../../assets/gh/gh-5.jpg" alt="">
+      <img src="../../../assets/gh/gh-6.jpg" alt="">
       <div class="ret2" @click="ret">
-         <img src="../../assets/ret2.png" alt="">
+         <img src="../../../assets/ret2.png" alt="">
       </div>
       
    </div>

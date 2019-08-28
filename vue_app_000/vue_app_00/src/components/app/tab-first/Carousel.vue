@@ -24,8 +24,6 @@ export default {
             var url="carousel";
             this.axios.get(url).then(res=>{
                 this.carousel=res.data.data;
-                // console.log(this.carousel);
-                // console.log(res);
             });
         }
     },

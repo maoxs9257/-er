@@ -1,7 +1,7 @@
 <template>
     <div class="login">
         <div class="login_img">
-        <img @click="retu" src="../../assets/ret.png" />
+        <img @click="retu" src="../../../assets/ret.png" />
         </div>
         <div class="login_center">
             <span class="login_dl">
@@ -25,7 +25,7 @@
                 <span class="th_lg">第三方账号登录</span>
             </p>
             <p>
-                <img src="../../assets/weixin.png"/>
+                <img src="../../../assets/weixin.png"/>
             </p>
             <p>
                 <span class="wei_xin">微信登录</span>

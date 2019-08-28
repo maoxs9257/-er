@@ -10,7 +10,7 @@
             <span>{{item.title}}</span>
             <span class="merrec-price">
                <span>￥{{item.price}}</span>
-               <img src="../../assets/cart.png" alt="">
+               <img src="../../../assets/cart.png" alt="">
             </span>
          </div>
       </div>

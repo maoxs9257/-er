@@ -1,20 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloContainer from "./components/HelloWorld.vue"
-import Login from './components/app/Login.vue'
-import Reg from './components/app/Reg.vue'
+import Login from './components/app/tab-self/Login.vue'
+import Reg from './components/app/tab-self/Reg.vue'
 import Xy from './components/app/xy.vue'
-import User from './components/app/User.vue'
-import Shoppingcart from './components/app/Shoppingcart.vue'
+import Shoppingcart from './components/app/shopping-cart/Shoppingcart.vue'
 import Index from './components/index.vue'
-import Titlebar from './components/app/Titlebar.vue'
-import Carousel from './components/app/Carousel.vue'
-import HomePage from './components/app/HomePage.vue'
-import Gh from './components/app/Gh.vue'
-import Th from './components/app/Th.vue'
-import MerRec from './components/app/MerRec.vue'
-import BigImg from './components/app/BigImg.vue'
-import Search from './components/app/Search.vue'
+import Gh from './components/app/tab-first/Gh.vue'
+import Th from './components/app/tab-first/Th.vue'
+import ProductList from './components/app/Product-list'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -22,16 +16,10 @@ export default new Router({
     {path:'/',component:HelloContainer},
     {path:'/Reg',component:Reg},
     {path:'/Xy',component:Xy},
-    {path:'/User',component:User},
     {path:'/Shoppingcart',component:Shoppingcart},
     {path:'/Index',component:Index},
-    {path:'/Titlebar',component:Titlebar},
-    {path:'/Carousel',component:Carousel},
-    {path:'/HomePage',component:HomePage},
     {path:'/Gh',component:Gh},
     {path:'/Th',component:Th},
-    {path:'/MerRec',component:MerRec},
-    {path:'/BigImg',component:BigImg},
-    {path:'/Search',component:Search}
+    {path:'/ProductList',component:ProductList}
   ]
 })

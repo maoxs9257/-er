@@ -1,15 +1,15 @@
 <template>
     <div class="father">
         <div class="header_top">
-            <div class="msage_1"><img src="../../assets/msage.png" alt=""></div>
+            <div class="msage_1"><img src="../../../assets/msage.png" alt=""></div>
             <div class="login_user">
                 <div class="header">
                 <span>
-                    <img src="../../assets/user_p.png" alt="">
+                    <img src="../../../assets/user_p.png" alt="">
                 </span>
                 <span @click="dl_user">立即登录</span>
                 <span>
-                    <img src="../../assets/jifen.png" alt="">
+                    <img src="../../../assets/jifen.png" alt="">
                     <span>签到领积分</span>
                 </span>
                 </div>
@@ -31,19 +31,19 @@
             </div>
             <dir class="te_img">
                 <div>
-                    <img src="../../assets/zf.png">
+                    <img src="../../../assets/zf.png">
                     <p>待支付</p>
                 </div>
                 <div>
-                    <img src="../../assets/dsh.png">
+                    <img src="../../../assets/dsh.png">
                     <p>待收货</p>
                 </div>
                 <div>
-                    <img src="../../assets/pj.png">
+                    <img src="../../../assets/pj.png">
                     <p>待评价</p>
                 </div>
                 <div>
-                    <img src="../../assets/shp.png">
+                    <img src="../../../assets/shp.png">
                     <p>售后/退款</p>
                 </div>
             </dir>
@@ -55,39 +55,39 @@
             <p>常用功能</p>
             <div class="cy_gn">
                 <div>
-                    <img src="../../assets/vip.png" alt="">
+                    <img src="../../../assets/vip.png" alt="">
                     <p>我的绿卡</p>
                 </div>
                 <div>
-                    <img src="../../assets/dizhi.png" alt="">
+                    <img src="../../../assets/dizhi.png" alt="">
                     <p>收货地址</p>
                 </div>
                 <div>
-                    <img src="../../assets/yaoqing.png" alt="">
+                    <img src="../../../assets/yaoqing.png" alt="">
                     <p>邀请有礼</p>
                 </div>
                 <div>
-                    <img src="../../assets/lianxi.png" alt="">
+                    <img src="../../../assets/lianxi.png" alt="">
                     <p>联系客服</p>
                 </div>
                 <div>
-                    <img src="../../assets/lipin.png" alt="">
+                    <img src="../../../assets/lipin.png" alt="">
                     <p>礼品卡</p>
                 </div>
                 <div>
-                    <img src="../../assets/saoyisao.png" alt="">
+                    <img src="../../../assets/saoyisao.png" alt="">
                     <p>扫一扫</p>
                 </div>
                 <div>
-                    <img src="../../assets/fankui.png" alt="">
+                    <img src="../../../assets/fankui.png" alt="">
                     <p>意见反馈</p>
                 </div>
                 <div>
-                    <img src="../../assets/shezhi.png" alt="">
+                    <img src="../../../assets/shezhi.png" alt="">
                     <p>设置</p>
                 </div>
                 <div>
-                    <img src="../../assets/qiye.png" alt="">
+                    <img src="../../../assets/qiye.png" alt="">
                     <p>企业采购</p>
                 </div>
             </div>
@@ -104,7 +104,7 @@
                 </div>
                 <div>
                     <span>￥{{item.price}}</span>
-                    <img src="../../assets/cart.png" alt="">
+                    <img src="../../../assets/cart.png" alt="">
                 </div>
             </div>
         </div>

@@ -1,14 +1,14 @@
 <template>
     <div class="reg">
         <div class="reg_img" @click="retu">
-            <img  src="../../assets/ret.png" />
+            <img  src="../../../assets/ret.png" />
         </div>
         <div class="reg_center">
             <span class="reg_zc">叮当注册</span>
         </div>
         <div>
-            <mt-field v-model="uname" class="reg_user" placeholder="3-6位有效用户名"><img src="../../assets/user_n.png"></mt-field>
-            <mt-field v-model="upwd" class="reg_pwd" type="password" placeholder="6-12位有效密码"><img src="../../assets/password.png"></mt-field>
+            <mt-field v-model="uname" class="reg_user" placeholder="3-6位有效用户名"><img src="../../../assets/user_n.png"></mt-field>
+            <mt-field v-model="upwd" class="reg_pwd" type="password" placeholder="6-12位有效密码"><img src="../../../assets/password.png"></mt-field>
         </div>
         <div class="dingdong">
             <input type="checkbox">

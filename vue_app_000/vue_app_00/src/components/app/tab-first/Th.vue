@@ -1,11 +1,11 @@
 <template>
    <div class="th">
       <a href="http://www.12377.cn/">
-         <img src="../../assets/ts/ts-1.jpg" alt="">
-         <img src="../../assets/ts/ts-1.jpg" alt="">
+         <img src="../../../assets/ts/ts-1.jpg" alt="">
+         <img src="../../../assets/ts/ts-1.jpg" alt="">
       </a>
       <div class="th2" @click="th">
-         <img src="../../assets/ret2.png" alt="">
+         <img src="../../../assets/ret2.png" alt="">
       </div>
    </div>
 </template>

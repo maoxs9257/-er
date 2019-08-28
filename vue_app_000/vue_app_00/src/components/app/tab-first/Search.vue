@@ -1,6 +1,6 @@
 <template>
    <div class="search">
-      <img src="../../assets/search.png" alt="">
+      <img src="../../../assets/search.png" alt="">
       <input type="text" placeholder="请输入商品名称">
       <span>搜索</span>
    </div>

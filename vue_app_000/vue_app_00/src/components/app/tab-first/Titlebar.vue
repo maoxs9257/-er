@@ -1,8 +1,8 @@
 <template>
    <div>
       <div class="header-top">
-         <span>上海<img src="../../assets/jiantou.png" alt=""></span>
-         <span class="i-img"><img src="../../assets/search.png" alt=""></span>
+         <span>上海<img src="../../../assets/jiantou.png" alt=""></span>
+         <span class="i-img"><img src="../../../assets/search.png" alt=""></span>
          <input type="text" placeholder="搜索：" @focus="search">
       </div>
       <!-- <mt-picker :slots="slots" @change="onValuesChange"></mt-picker> -->

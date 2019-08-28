@@ -86,16 +86,16 @@
     </div>
 </template>
 <script>
-import User from './app/User.vue'
-import TabBaricon from './app/TabBarIcon.vue'
-import Titlebar from './app/Titlebar.vue'
-import Carousel from './app/Carousel.vue'
-import HomePage from './app/HomePage.vue'
-import MerRec from './app/MerRec.vue'
-import Prod_img from './app/Prod_img.vue'
-import BigImg from './app/BigImg.vue'
-import Search from './app/Search'
-import Product_s from './app/Product_s'
+import User from './app/tab-self/User.vue'
+import TabBaricon from './app/tab-first/TabBarIcon.vue'
+import Titlebar from './app/tab-first/Titlebar.vue'
+import Carousel from './app/tab-first/Carousel.vue'
+import HomePage from './app/tab-first/HomePage.vue'
+import MerRec from './app/tab-first/MerRec.vue'
+import Prod_img from './app/tab-first/Prod_img.vue'
+import BigImg from './app/tab-first/BigImg.vue'
+import Search from './app/tab-first/Search'
+import Product_s from './app/tab-fenlei/Product_s'
 export default {
     data(){
         return{
