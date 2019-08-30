@@ -1,10 +1,10 @@
 <template>
    <div class="jinkou">
-      <div @click="ProductList">
+      <div @click="ProductList()">
          <img src="../../../assets/all.jpg" alt="">
          <span>全部商品</span>
       </div>
-      <div v-for="(item,i) of rows " :key="i" @click="ProductList">
+      <div v-for="(item,i) of rows " :key="i" @click="ProLi(item.mid)">
          <img :src="`http://127.0.0.1:3001/`+item.mimg_url" alt="">
          <span>{{item.name}}</span>
       </div>
@@ -15,7 +15,7 @@ export default {
    props:{lid:{default:""}},
    data(){
       return{
-         rows:""
+         rows:"",
       }
    },
    created(){
@@ -34,6 +34,14 @@ export default {
       },
       ProductList(){
          this.$router.push('/PListhtml');
+      },
+      ProLi(mid){
+         this.$router.push(
+            {
+               path:'/ProductList',
+               query:{mid:mid}
+            }
+         );
       }
    }
 }

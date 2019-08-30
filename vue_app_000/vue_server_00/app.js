@@ -164,9 +164,20 @@ server.get("/bigimg",(req,res)=>{
 //http://127.0.0.1:3001/loadpro?lid=1
 server.get("/loadpro",(req,res)=>{
   var lid=req.query.lid;
-  var sql="SELECT mimg_url,name FROM dd_merrec WHERE lid=?";
+  var sql="SELECT mimg_url,name,mid FROM dd_merrec WHERE lid=?";
   pool.query(sql,[lid],(err,result)=>{
     if (err) throw err;
+    res.send({code:1,msg:"查询成功",data:result});
+  })
+})
+
+//根据列表页面传递的mid查询商品的详细信息
+//http://127.0.0.1:3001/productlist?mid=10
+server.get("/productlist",(req,res)=>{
+  var mid=req.query.mid;
+  var sql="SELECT carousel,title,mtitle,price,price_m,preference,madein,details,specs FROM dd_merrec WHERE mid=?";
+  pool.query(sql,[mid],(err,result)=>{
+    if(err) throw err;
     res.send({code:1,msg:"查询成功",data:result});
   })
 })

@@ -1,34 +1,28 @@
 <template>
     <div class="color">
         <mt-swipe :auto="10000">
-            <mt-swipe-item>
-                <img class="img-bin" src="../../assets/1/1-1.jpg"/>
-            </mt-swipe-item>
-            <mt-swipe-item>
-                <img class="img-bin" src="../../assets/1/1-2.jpg"/>
-            </mt-swipe-item>
-            <mt-swipe-item>
-                <img class="img-bin" src="../../assets/1/1-3.jpg"/>
+            <mt-swipe-item v-for="(item,i) of carousel" :key="i">
+                <img class="img-bin" :src="`http://127.0.0.1:3001/`+item"/>
             </mt-swipe-item>
         </mt-swipe>
-        <div class="retu-w">
+        <div class="retu-w" @click="retuT">
            <img src="../../assets/goback.png" alt="">
         </div>
-        <p class="title">新疆西梅400g</p>
+        <p class="title">{{list.title}}</p>
         <p class="p-title">
-           <span>惊喜价23.9元</span>
-           <span>一“梅”两吃 软硬皆宜</span>
+           <span>{{list.preference}}</span>
+           <span>{{list.mtitle}}</span>
         </p>
         <div class="price">
-           <span>￥23.9</span>
-           <span>￥38</span>
-           <span>产地：新疆</span>
+           <span>￥{{list.price}}</span>
+           <span>￥{{list.price_m}}</span>
+           <span>产地：{{list.madein}}</span>
         </div>
         <div class="preference">
            <p>
               <span>促销</span>
               <span>优惠</span>
-              <span>惊喜价23.9元</span>
+              <span>{{list.preference}}</span>
            </p>
            <p>
                <span>全网</span>
@@ -42,7 +36,7 @@
         <div class="content">
             <div>
                 <span>规格</span>
-                <span>1个/箱</span>
+                <span>{{list.specs}}</span>
             </div>
             <div>
                 <span>数量</span>
@@ -102,14 +96,31 @@
 export default {
     data(){
         return{
-         
+            list:'',
+            carousel:''
         }
     },
     created(){
-      
+      this.Load();
     },
     methods: {
-        
+        Load(){
+            var mid=this.$route.query.mid;
+            var url="productlist";
+            var obj={mid:mid};
+            this.axios.get(url,{params:obj}).then(res=>{
+                var pro=res.data.data;
+                this.list=pro[0];
+                // console.log(this.list);
+                // 取出结果，并且结果按照 , 分割成功数组
+                this.carousel=pro[0].carousel.split(","); 
+                // console.log(this.carousel);
+            })
+            // console.log(this.$route.query.mid);
+        },
+        retuT(){
+            history.go(-1);
+        }
     },
 }
 </script>
@@ -211,7 +222,7 @@ export default {
 }
 .price>span:last-child{
     display: inline-block;
-    padding-left: 130px;
+    padding-left: 27%;
     font-size: 15px;
     color:#999;
 }
@@ -311,7 +322,7 @@ export default {
     margin-left: 20px;
     padding:10px 10px;
     font-size: 16px;
-    width:50px;
+    /* width:50px; */
     line-height: 14px;
     text-align: center;
 }

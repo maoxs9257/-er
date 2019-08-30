@@ -2,12 +2,15 @@
    <div>
       <mt-navbar v-model="active" fixed>
          <mt-tab-item id="plh-1">
-            销量
+            全部
          </mt-tab-item>
          <mt-tab-item id="plh-2">
-            新品
+            销量
          </mt-tab-item>
          <mt-tab-item id="plh-3">
+            新品
+         </mt-tab-item>
+         <mt-tab-item id="plh-4">
             价格
          </mt-tab-item>
       </mt-navbar>
@@ -19,6 +22,9 @@
             <list></list>
          </mt-tab-container-item>
          <mt-tab-container-item id="plh-3">
+            <list></list>
+         </mt-tab-container-item>
+         <mt-tab-container-item id="plh-4">
             <list></list>
          </mt-tab-container-item>
       </mt-tab-container>

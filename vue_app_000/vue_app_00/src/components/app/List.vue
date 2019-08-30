@@ -222,13 +222,13 @@ export default {
    border-radius: 5px 5px 0 0 ;
    border-bottom: 1px solid #fff;
    position: fixed;
-   bottom:190px;
+   bottom:104px;
    right: 2px;
 }
 .img-2{
    border-radius:0 0 5px 5px;
    position: fixed;
-   bottom:156px;
+   bottom:70px;
    right: 2px;
 }
 </style>
