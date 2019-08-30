@@ -1,6 +1,10 @@
 <template>
    <div class="jinkou">
-      <div v-for="(item,i) of rows " :key="i">
+      <div @click="ProductList">
+         <img src="../../../assets/all.jpg" alt="">
+         <span>全部商品</span>
+      </div>
+      <div v-for="(item,i) of rows " :key="i" @click="ProductList">
          <img :src="`http://127.0.0.1:3001/`+item.mimg_url" alt="">
          <span>{{item.name}}</span>
       </div>
@@ -27,6 +31,9 @@ export default {
             this.rows=res.data.data;
             // console.log(this.rows);
          });
+      },
+      ProductList(){
+         this.$router.push('/PListhtml');
       }
    }
 }

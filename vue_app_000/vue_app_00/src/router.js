@@ -9,6 +9,7 @@ import Index from './components/index.vue'
 import Gh from './components/app/tab-first/Gh.vue'
 import Th from './components/app/tab-first/Th.vue'
 import ProductList from './components/app/Product-list'
+import PListhtml from './components/app/PList-html'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -20,6 +21,7 @@ export default new Router({
     {path:'/Index',component:Index},
     {path:'/Gh',component:Gh},
     {path:'/Th',component:Th},
-    {path:'/ProductList',component:ProductList}
+    {path:'/ProductList',component:ProductList},
+    {path:'/PListhtml',component:PListhtml}
   ]
 })
