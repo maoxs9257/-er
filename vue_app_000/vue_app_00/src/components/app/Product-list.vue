@@ -40,9 +40,9 @@
             </div>
             <div>
                 <span>数量</span>
-                <button>-</button>
-                <span>1</span>
-                <button>+</button>
+                <button @click="btn1">-</button>
+                <span >{{n}}</span>
+                <button @click="btn2">+</button>
             </div>
         </div>
          <div class="map">
@@ -55,7 +55,7 @@
              </p>
              <p>
                  <span>有货</span>
-                 <span>20:00 前完成订单，预计明日(8月30日)送达</span>
+                 <span>20:00 前完成订单，预计明日({{month}}{{date}})送达</span>
              </p>
          </div>
          <div class="pinglun">
@@ -76,7 +76,7 @@
                  </p>
              </div>
          </div>
-         <div class="pro-i">
+         <div class="pro-i" @click="detilePro(list.details)">
              <span>查看图文详情</span>
          </div>
          <div class="footer">
@@ -97,11 +97,15 @@ export default {
     data(){
         return{
             list:'',
-            carousel:''
+            carousel:'',
+            month:'',
+            date:'',
+            n:'1'
         }
     },
     created(){
       this.Load();
+      this.GetTime();
     },
     methods: {
         Load(){
@@ -111,15 +115,37 @@ export default {
             this.axios.get(url,{params:obj}).then(res=>{
                 var pro=res.data.data;
                 this.list=pro[0];
-                // console.log(this.list);
+                // console.log(this.list.details);
                 // 取出结果，并且结果按照 , 分割成功数组
                 this.carousel=pro[0].carousel.split(","); 
                 // console.log(this.carousel);
             })
             // console.log(this.$route.query.mid);
         },
+        GetTime(){
+            var da=new Date();
+            var month=da.getMonth()+1+'月';
+            var date=da.getDate()+1+'日';
+            this.month=month;
+            this.date=date;
+        },
+        btn1(){
+            if(this.n>1)
+            this.n=this.n-1;
+        },
+        btn2(){
+            this.n=parseInt(this.n)+1;
+        },
         retuT(){
             history.go(-1);
+        },
+        detilePro(details){
+            this.$router.push(
+                {
+                path:'/Details',
+                query:{details:details}
+                }
+            );
         }
     },
 }

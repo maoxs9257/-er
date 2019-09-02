@@ -160,6 +160,16 @@ server.get("/bigimg",(req,res)=>{
   });
 })
 
+//查询全部商品列表
+//http://127.0.0.1:3001/loadlist?
+server.get("/loadlist",(req,res)=>{
+  var sql="SELECT mimg_url,title,mtitle,preference,price,price_m,specs FROM dd_merrec";
+  pool.query(sql,(err,result)=>{
+    if (err) throw err;
+    res.send({code:1,msg:"查询成功",data:result})
+  })
+})
+
 //查询商品详情信息
 //http://127.0.0.1:3001/loadpro?lid=1
 server.get("/loadpro",(req,res)=>{

@@ -10,6 +10,7 @@ import Gh from './components/app/tab-first/Gh.vue'
 import Th from './components/app/tab-first/Th.vue'
 import ProductList from './components/app/Product-list'
 import PListhtml from './components/app/PList-html'
+import Details from './components/app/Details'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -22,6 +23,7 @@ export default new Router({
     {path:'/Gh',component:Gh},
     {path:'/Th',component:Th},
     {path:'/ProductList',component:ProductList},
-    {path:'/PListhtml',component:PListhtml}
+    {path:'/PListhtml',component:PListhtml},
+    {path:'/Details',component:Details}
   ]
 })

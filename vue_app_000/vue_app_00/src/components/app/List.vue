@@ -1,129 +1,17 @@
 <template>
    <div class="list-father">
-      <div class="list">
+      <div class="list" v-for="(item,i) of list" :key="i">
          <span>
-            <img src="../../assets/300.jpg" alt="">
+            <img :src="`http://127.0.0.1:3001/`+item.mimg_url" alt="">
          </span>
          <div class="list-p">
-            <p>Zespri佳沛新西兰阳光金奇异果3.3kg原箱(22-25个)</p>
-            <p>巨无霸金果 软糯香甜 用券有惊喜</p>
-            <span>限时抢购</span>
+            <p>{{item.title}}</p>
+            <p>{{item.mtitle}}</p>
+            <span>{{item.preference}}</span>
             <p class="list-s">
-               <span>¥249</span>
-               <span>¥298</span>
-               <span>3.3kg/箱</span>
-               <img src="../../assets/add.png" alt="">
-            </p>
-         </div>
-      </div>
-      <div class="list">
-         <span>
-            <img src="../../assets/300.jpg" alt="">
-         </span>
-         <div class="list-p">
-            <p>Zespri佳沛新西兰阳光金奇异果3.3kg原箱(22-25个)</p>
-            <p>巨无霸金果 软糯香甜 用券有惊喜</p>
-            <span>限时抢购</span>
-            <p class="list-s">
-               <span>¥249</span>
-               <span>¥298</span>
-               <span>3.3kg/箱</span>
-               <img src="../../assets/add.png" alt="">
-            </p>
-         </div>
-      </div>
-      <div class="list">
-         <span>
-            <img src="../../assets/300.jpg" alt="">
-         </span>
-         <div class="list-p">
-            <p>Zespri佳沛新西兰阳光金奇异果3.3kg原箱(22-25个)</p>
-            <p>巨无霸金果 软糯香甜 用券有惊喜</p>
-            <span>限时抢购</span>
-            <p class="list-s">
-               <span>¥249</span>
-               <span>¥298</span>
-               <span>3.3kg/箱</span>
-               <img src="../../assets/add.png" alt="">
-            </p>
-         </div>
-      </div>
-      <div class="list">
-         <span>
-            <img src="../../assets/300.jpg" alt="">
-         </span>
-         <div class="list-p">
-            <p>Zespri佳沛新西兰阳光金奇异果3.3kg原箱(22-25个)</p>
-            <p>巨无霸金果 软糯香甜 用券有惊喜</p>
-            <span>限时抢购</span>
-            <p class="list-s">
-               <span>¥249</span>
-               <span>¥298</span>
-               <span>3.3kg/箱</span>
-               <img src="../../assets/add.png" alt="">
-            </p>
-         </div>
-      </div>
-      <div class="list">
-         <span>
-            <img src="../../assets/300.jpg" alt="">
-         </span>
-         <div class="list-p">
-            <p>Zespri佳沛新西兰阳光金奇异果3.3kg原箱(22-25个)</p>
-            <p>巨无霸金果 软糯香甜 用券有惊喜</p>
-            <span>限时抢购</span>
-            <p class="list-s">
-               <span>¥249</span>
-               <span>¥298</span>
-               <span>3.3kg/箱</span>
-               <img src="../../assets/add.png" alt="">
-            </p>
-         </div>
-      </div>
-      <div class="list">
-         <span>
-            <img src="../../assets/300.jpg" alt="">
-         </span>
-         <div class="list-p">
-            <p>Zespri佳沛新西兰阳光金奇异果3.3kg原箱(22-25个)</p>
-            <p>巨无霸金果 软糯香甜 用券有惊喜</p>
-            <span>限时抢购</span>
-            <p class="list-s">
-               <span>¥249</span>
-               <span>¥298</span>
-               <span>3.3kg/箱</span>
-               <img src="../../assets/add.png" alt="">
-            </p>
-         </div>
-      </div>
-      <div class="list">
-         <span>
-            <img src="../../assets/300.jpg" alt="">
-         </span>
-         <div class="list-p">
-            <p>Zespri佳沛新西兰阳光金奇异果3.3kg原箱(22-25个)</p>
-            <p>巨无霸金果 软糯香甜 用券有惊喜</p>
-            <span>限时抢购</span>
-            <p class="list-s">
-               <span>¥249</span>
-               <span>¥298</span>
-               <span>3.3kg/箱</span>
-               <img src="../../assets/add.png" alt="">
-            </p>
-         </div>
-      </div>
-      <div class="list">
-         <span>
-            <img src="../../assets/300.jpg" alt="">
-         </span>
-         <div class="list-p">
-            <p>Zespri佳沛新西兰阳光金奇异果3.3kg原箱(22-25个)</p>
-            <p>巨无霸金果 软糯香甜 用券有惊喜</p>
-            <span>限时抢购</span>
-            <p class="list-s">
-               <span>¥249</span>
-               <span>¥298</span>
-               <span>3.3kg/箱</span>
+               <span>¥{{item.price}}</span>
+               <span>¥{{item.price_m}}</span>
+               <span>{{item.specs}}</span>
                <img src="../../assets/add.png" alt="">
             </p>
          </div>
@@ -140,10 +28,21 @@
 export default {
    data(){
       return{
-
+         list:''
       }
    },
+   created(){
+      this.LoadList();
+   },
    methods:{
+      LoadList(){
+         var url="loadlist";
+         this.axios.get(url).then(res=>{
+            var list=res.data.data;
+            this.list=list;
+            // console.log(this.list);
+         })
+      },
       retur(){
          history.go(-1);
       },
