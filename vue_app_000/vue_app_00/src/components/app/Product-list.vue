@@ -110,6 +110,7 @@ export default {
     methods: {
         Load(){
             var mid=this.$route.query.mid;
+            // console.log(this.$route.query.mid);
             var url="productlist";
             var obj={mid:mid};
             this.axios.get(url,{params:obj}).then(res=>{
@@ -120,7 +121,7 @@ export default {
                 this.carousel=pro[0].carousel.split(","); 
                 // console.log(this.carousel);
             })
-            // console.log(this.$route.query.mid);
+            
         },
         GetTime(){
             var da=new Date();

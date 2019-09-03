@@ -1,6 +1,6 @@
 <template>
    <div class="list-father">
-      <div class="list" v-for="(item,i) of list" :key="i">
+      <div class="list" v-for="(item,i) of list" :key="i" @click="Download(item.mid)">
          <span>
             <img :src="`http://127.0.0.1:3001/`+item.mimg_url" alt="">
          </span>
@@ -48,6 +48,14 @@ export default {
       },
       shoppingCart(){
          this.$router.push('/');
+      },
+      Download(mid){
+         this.$router.push(
+            {
+               path:'/ProductList',
+               query:{mid:mid}
+            }
+         );
       }
    }
 }
