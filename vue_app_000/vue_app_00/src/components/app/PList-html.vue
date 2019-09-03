@@ -16,7 +16,7 @@
       </mt-navbar>
       <mt-tab-container v-model="active">
          <mt-tab-container-item id="plh-1">
-            <list></list>
+            <list :url="loadlist"></list>
          </mt-tab-container-item>
          <mt-tab-container-item id="plh-2">
             <list></list>
