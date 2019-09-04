@@ -14,7 +14,7 @@ export default {
 <style scoped>
 *{
     margin:0;
-    padding:0px;
+    padding:0px;   
     box-sizing: border-box;
 }
 .father_top{

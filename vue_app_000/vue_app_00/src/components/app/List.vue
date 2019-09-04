@@ -26,6 +26,7 @@
 </template>
 <script>
 export default {
+   props:{url:{default:""}},
    data(){
       return{
          list:''
@@ -36,11 +37,10 @@ export default {
    },
    methods:{
       LoadList(){
-         var url="loadlist";
+         var url=this.url;
          this.axios.get(url).then(res=>{
             var list=res.data.data;
             this.list=list;
-            // console.log(this.list);
          })
       },
       retur(){
@@ -95,12 +95,19 @@ export default {
    border-radius: 5px;
    margin:5px 0 10px;
 }
+.list-s{
+   position: relative;
+}
 .list-s>span:first-child{
    color:#fd3d3d;
    font-size: 14px;
+   display: inline-block;
+   width:37px;
 }
 .list-s>span:nth-child(2){
    color:#999;
+   display: inline-block;
+   width:32px;
    display: inline-block;
    margin-left: 10px;
    text-decoration: line-through;
@@ -109,15 +116,18 @@ export default {
 .list-s>span:nth-child(3){
    color:#999;
    display: inline-block;
+   width:80px;
+   display: inline-block;
    margin-left: 10px;
    font-size: 12px;
 }
 .list-s>img{
    width:24px;
    height:24px;
-   margin-left: 97px;
+   /* margin-left: 97px; */
    position: relative;
-   top:11px;
+   top:5px;
+   right: -35px;
 }
 .img-1,.img-2{
    text-align: center;

@@ -35,7 +35,7 @@
                 吃什么
             </mt-tab-container-item>
             <mt-tab-container-item id="shopping-cart">
-                购物车
+                <shoppingcart></shoppingcart>
             </mt-tab-container-item>
             <mt-tab-container-item id="tab-self">
                 <user></user>
@@ -96,6 +96,7 @@ import Prod_img from './app/tab-first/Prod_img.vue'
 import BigImg from './app/tab-first/BigImg.vue'
 import Search from './app/tab-first/Search'
 import Product_s from './app/tab-fenlei/Product_s'
+import Shoppingcart from './app/shopping-cart/Shoppingcart'
 export default {
     data(){
         return{
@@ -120,7 +121,8 @@ export default {
         "prod":Prod_img,
         "bigimg":BigImg,
         "search":Search,
-        "product":Product_s
+        "product":Product_s,
+        "shoppingcart":Shoppingcart
     },
     methods:{
         changeState(n){

@@ -42,7 +42,7 @@ server.listen(3001);
 
 
 
-//功能一:完成用户登录操作
+//功能 1 :完成用户登录操作
 server.get("/login",(req,res)=>{
   //1:参数:获取网页传递两个数据 uname upwd
   //参数方式一:?uname=tom&upwd=123 查询字符串
@@ -73,7 +73,7 @@ server.get("/login",(req,res)=>{
 //http://127.0.0.1:3001/login?uname=tom1&upwd=123456
 //http://127.0.0.1:3001/login?uname=tom&upwd=121
 
-// 用户注册界面
+//功能 2 用户注册界面
 server.get("/reg",(req,res)=>{
   var uname=req.query.uname;
   var upwd=req.query.upwd;
@@ -98,7 +98,7 @@ server.get("/reg",(req,res)=>{
   })
 })
 
-// 查询优惠券
+//功能 3 查询优惠券
 // http://127.0.0.1:3001/youhui?cid=1
 server.get("/youhui",(req,res)=>{
   var cid=req.query.cid;
@@ -109,7 +109,7 @@ server.get("/youhui",(req,res)=>{
     res.send({code:1,msg:"查询成功",data:result});
   })
 });
-// 查询轮播图
+//功能 4 查询轮播图
 // http://127.0.0.1:3001/carousel?
 server.get("/carousel",(req,res)=>{
   var sql="SELECT * FROM dd_carousel";
@@ -118,7 +118,7 @@ server.get("/carousel",(req,res)=>{
     res.send({code:1,msg:"查询成功",data:result});
   });
 });
-// 查询导航列表
+//功能 5 查询导航列表
 // http://127.0.0.1:3001/gpi?
 server.get("/gpi",(req,res)=>{
   var sql="SELECT gimg_url,title FROM dd_gp";
@@ -127,7 +127,7 @@ server.get("/gpi",(req,res)=>{
     res.send({code:1,msg:"查询成功",data:result});
   })
 })
-//查询第一个横向商品信息
+//功能 6 查询第一个横向商品信息
 // http://127.0.0.1:3001/merrec?did=1
 server.get("/merrec",(req,res)=>{
   var did=req.query.did;
@@ -139,7 +139,7 @@ server.get("/merrec",(req,res)=>{
 })
 
 
-//查询首页广告商品图片
+//功能 7 查询首页广告商品图片
 //http://127.0.0.1:3001/prod_img?iid=1
 server.get("/prod_img",(req,res)=>{
   var iid=req.query.iid;
@@ -149,7 +149,7 @@ server.get("/prod_img",(req,res)=>{
     res.send({code:1,msg:"查询成功",data:result});
   })
 })
-// 查询首页广告大图
+//功能 8 查询首页广告大图
 //http://127.0.0.1:3001/bigimg?bid=1
 server.get("/bigimg",(req,res)=>{
   var bid=req.query.bid;
@@ -160,7 +160,7 @@ server.get("/bigimg",(req,res)=>{
   });
 })
 
-//查询全部商品列表
+// 功能 9 查询全部商品列表
 //http://127.0.0.1:3001/loadlist?
 server.get("/loadlist",(req,res)=>{
   var sql="SELECT mimg_url,title,mtitle,preference,price,price_m,specs,mid FROM dd_merrec";
@@ -170,7 +170,38 @@ server.get("/loadlist",(req,res)=>{
   })
 })
 
-//查询商品详情信息
+//功能 10 通过销量查询商品列表
+// http://127.0.0.1:3001/xiaoliang?
+server.get("/xiaoliang",(req,res)=>{
+  var sql="SELECT mimg_url,title,mtitle,preference,price,price_m,specs,mid FROM dd_merrec ORDER BY salesVolume desc";
+  pool.query(sql,(err,result)=>{
+    if (err) throw err;
+    res.send({code:1,msg:"查询成功",data:result})
+  })
+})
+
+//功能 11 通过上新查询商品列表
+// http://127.0.0.1:3001/newshopp?
+server.get("/newshopp",(req,res)=>{
+  var sql="SELECT mimg_url,title,mtitle,preference,price,price_m,specs,mid FROM dd_merrec WHERE item=1";
+  pool.query(sql,(err,result)=>{
+    if (err) throw err;
+    res.send({code:1,msg:"查询成功",data:result})
+  })
+})
+
+
+//功能 12 通过价格查询商品列表
+// http://127.0.0.1:3001/price?
+server.get("/price",(req,res)=>{
+  var sql="SELECT mimg_url,title,mtitle,preference,price,price_m,specs,mid FROM dd_merrec ORDER BY price desc";
+  pool.query(sql,(err,result)=>{
+    if (err) throw err;
+    res.send({code:1,msg:"查询成功",data:result})
+  })
+})
+
+//功能 12 查询商品详情信息
 //http://127.0.0.1:3001/loadpro?lid=1
 server.get("/loadpro",(req,res)=>{
   var lid=req.query.lid;
@@ -181,7 +212,7 @@ server.get("/loadpro",(req,res)=>{
   })
 })
 
-//根据列表页面传递的mid查询商品的详细信息
+//功能 13 根据列表页面传递的mid查询商品的详细信息
 //http://127.0.0.1:3001/productlist?mid=10
 server.get("/productlist",(req,res)=>{
   var mid=req.query.mid;

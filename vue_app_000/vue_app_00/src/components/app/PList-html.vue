@@ -11,21 +11,21 @@
             新品
          </mt-tab-item>
          <mt-tab-item id="plh-4">
-            价格
+            价格↓
          </mt-tab-item>
       </mt-navbar>
       <mt-tab-container v-model="active">
          <mt-tab-container-item id="plh-1">
-            <list :url="loadlist"></list>
+            <list url="loadlist"></list>
          </mt-tab-container-item>
          <mt-tab-container-item id="plh-2">
-            <list></list>
+            <list url="xiaoliang"></list>
          </mt-tab-container-item>
          <mt-tab-container-item id="plh-3">
-            <list></list>
+            <list url='newshopp'></list>
          </mt-tab-container-item>
          <mt-tab-container-item id="plh-4">
-            <list></list>
+            <list url="price"></list>
          </mt-tab-container-item>
       </mt-tab-container>
    </div>
@@ -35,7 +35,7 @@ import list from './List'
 export default {
    data(){
       return{
-         active:"plh-1"
+         active:"plh-1",
       }
    },
    methods:{
